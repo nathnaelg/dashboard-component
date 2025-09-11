@@ -2,11 +2,16 @@
   "name": "dashboard-component",
   "version": "0.1.0",
   "private": true,
+  "description": "Monorepo system for client management and gaming analytics dashboards",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint"
+    "build": "pnpm run build --workspaces",
+    "dev": "pnpm run dev --workspace=apps/main",
+    "lint": "pnpm run lint --workspaces",
+    "clean": "pnpm run clean --workspaces"
   },
   "dependencies": {
     "react": "19.1.0",
