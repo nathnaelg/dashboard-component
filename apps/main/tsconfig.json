@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./app/*"],
+      "@/components/*": ["./components/*"],
+      "@/lib/*": ["./lib/*"],
+      "@monorepo/ui-components": ["../../packages/ui-components/src"],
+      "@monorepo/utils": ["../../packages/utils/src"],
+      "@monorepo/feature-client-management": ["../../packages/feature-client-management/src"],
+      "@monorepo/feature-gaming-analytics": ["../../packages/feature-gaming-analytics/src"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
